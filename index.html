@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Measuring Success">
+    <meta name="author" content="Unity-Analytics">
+    <link rel="shortcut icon" href="img/ico/favicon.png">
+
+    <title>Unity Analytics: Measuring Success</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+    <script src="js/Chart.min.js"></script>
+  </head>
+<!-- NAVBAR ================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Unity Analytics</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Playtest With Real Gamers" alt="Playtest With Real Gamers">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Playtest With Real Gamers</h1>
+              <p>Games require multiple iterations of play testing with real users in order to succeed. We help you recruit players from our pool of thousands of real gamers, capture their feedback and turn that feedback into actionable insights.</p>
+              <p><a class="btn btn-lg btn-primary" href="mailto:beta@unity-analytics.com?subject=Sign%20Me%20Up" role="button">Sign up for the beta today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Made By Game Developers" alt="Made By Game Developers">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Made By Game Developers, For Game Developers</h1>
+              <p>Building a great game is a marathon of tweaking and testing. As former game developers, we are building Unity Analytics to work alongside you (like an extra member of your development team), giving you new ideas on how to improve and helping you iterate towards that golden launch date.</p>
+              <p><a class="btn btn-lg btn-primary" href="mailto:beta@unity-analytics.com?subject=Sign%20Me%20Up" role="button">Sign up for the beta today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Practical Analytics" alt="Practical Analytics">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Practical Analytics</h1>
+              <p>Once you have launched your game, we want to help you keep improving by providing comprehensive player behavior analytics. Once you have installed our easy-to-integrate SDK and tools, you can check your dashboard for custom cross-platform analytics reports and learn how to keep improving.</p>
+              <p><a class="btn btn-lg btn-primary" href="mailto:beta@unity-analytics.com?subject=Sign%20Me%20Up" role="button">Sign up for the beta today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Gather Qualitative Feedback" alt="Gather Qualitative Feedback">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Gather Qualitative Feedback</h1>
+              <p>Funnel and conversion analytics only tell you part of the story, our survey and messaging features allow you to gather targeted survey data from your live players after your game has launched.</p>
+              <p><a class="btn btn-lg btn-primary" href="mailto:beta@unity-analytics.com?subject=Sign%20Me%20Up" role="button">Sign up for the beta today</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Analyze, Improve. <span class="text-muted">Build what your players want.</span></h2>
+          <p class="lead">Game design is a tough nut to crack and you need all the help you can get to make your game a hit. Once you know how your players interact with your content, which level they quit on - you will know how to improve.</p>
+        </div>
+        <div class="col-md-5">
+          <canvas id="polarAxis" class="featurette-image img-responsive" height="500" width="500"/>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <canvas id="radar" class="featurette-image img-responsive" height="500" width="500"/>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Free and Simple<span class="text-muted"> Get started today</span></h2>
+          <p class="lead">Sign up for the beta and get early access, we would love to hear your feedback on how to improve. We want to build the analytics you have always dreamed of.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Tools to improve games <span class="text-muted"> Built by game developers, for game developers.</span></h2>
+          <p class="lead">We know what it takes to make great games and we want to help you get there.</p>
+        </div>
+        <div class="col-md-5">
+          <canvas id="pie" class="featurette-image img-responsive" height="500" width="500"/>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Unity-Analytics.com, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <script>
+
+      var pieData = [
+          {
+            value: 30,
+            color:"#F38630"
+          },
+          {
+            value : 50,
+            color : "#E0E4CC"
+          },
+          {
+            value : 100,
+            color : "#69D2E7"
+          }
+        
+        ];
+
+    var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+    
+    var radarChartData = {
+      labels : ["Eating","Testing","Game Design","More Testing","Coding","Analyzing","Improving"],
+      datasets : [
+        {
+          fillColor : "rgba(220,220,220,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          data : [65,59,90,81,56,55,40]
+        },
+        {
+          fillColor : "rgba(151,187,205,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          pointColor : "rgba(151,187,205,1)",
+          pointStrokeColor : "#fff",
+          data : [28,48,40,19,96,27,100]
+        }
+      ]
+      
+    }
+
+    var myRadar = new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+
+    var chartData = [
+        {
+          value : Math.random(),
+          color: "#D97041"
+        },
+        {
+          value : Math.random(),
+          color: "#C7604C"
+        },
+        {
+          value : Math.random(),
+          color: "#21323D"
+        },
+        {
+          value : Math.random(),
+          color: "#9D9B7F"
+        },
+        {
+          value : Math.random(),
+          color: "#7D4F6D"
+        },
+        {
+          value : Math.random(),
+          color: "#584A5E"
+        }
+      ];
+    var myPolarArea = new Chart(document.getElementById("polarAxis").getContext("2d")).PolarArea(chartData);
+
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40330740-5', 'unity-analytics.com');
+      ga('send', 'pageview'); 
+    </script>
+  </body>
+</html>
